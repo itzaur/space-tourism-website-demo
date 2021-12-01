@@ -1,0 +1,74 @@
+:root {
+  //colors
+  --clr-primary: 230 35% 7%;
+  --clr-secondary: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+
+  //font-sizes
+  --fs-900: clamp(6rem, 8vw + 1rem, 15rem); //space
+  --fs-800: 6rem;
+  --fs-700: 5.6rem;
+
+  --fs-600: 2rem; //large-button
+
+  --fs-500: clamp(1.6rem, 3vw + 1rem, 2.8rem); //h1
+
+  --fs-400: 1.5rem; //p
+
+  --fs-300: 1.4rem;
+  --fs-200: 1rem;
+
+  //font-families
+  --ff-primary-serif: 'Bellefair', serif;
+  --ff-secondary-sans: 'Barlow Condensed', sans-serif;
+}
+
+@media (min-width: 35em) {
+  //font-sizes
+  --fs-900: 15rem;
+  --fs-800: 8rem;
+  --fs-700: 5.6rem;
+
+  --fs-600: 3.2rem;
+
+  --fs-500: 2rem;
+
+  --fs-400: 1.6rem;
+}
+
+@media (min-width: 48em) {
+  //font-sizes
+
+  --fs-800: 10rem;
+  --fs-700: 5.6rem;
+
+  --fs-600: 3.2rem;
+
+  --fs-500: 2.8rem;
+
+  --fs-400: 1.8rem;
+}
+
+.bg-dark {
+  background-color: HSL(var(--clr-primary));
+}
+
+.bg-light {
+  background-color: HSL(var(--clr-secondary));
+}
+
+.bg-white {
+  background-color: HSL(var(--clr-white));
+}
+
+.text-dark {
+  color: HSL(var(--clr-primary));
+}
+
+.text-light {
+  color: HSL(var(--clr-secondary));
+}
+
+.text-white {
+  color: HSL(var(--clr-white));
+}
