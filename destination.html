@@ -20,6 +20,7 @@
 
     <title>Frontend Mentor | Space tourism website</title>
     <script src="app.js" defer></script>
+    <script src="tabs.js" defer></script>
   </head>
   <body class="destination">
     <header class="header flex">
@@ -79,66 +80,104 @@
       >
         <span>01</span>Pick your destination
       </h1>
-      <picture>
+
+      <picture id="Moon">
         <source
           srcset="./assets/destination/image-moon.webp"
           type="image/webp"
         />
         <img src="./assets/destination/image-moon.png" alt="" />
       </picture>
+      <picture hidden id="Mars">
+        <source
+          srcset="./assets/destination/image-mars.webp"
+          type="image/webp"
+        />
+        <img src="./assets/destination/image-mars.png" alt="" />
+      </picture>
+      <picture hidden id="Europa">
+        <source
+          srcset="./assets/destination/image-europa.webp"
+          type="image/webp"
+        />
+        <img src="./assets/destination/image-europa.png" alt="" />
+      </picture>
+      <picture hidden id="Titan">
+        <source
+          srcset="./assets/destination/image-titan.webp"
+          type="image/webp"
+        />
+        <img src="./assets/destination/image-titan.png" alt="" />
+      </picture>
 
-      <article>
-        <div class="flex tab-list underline-indicators">
-          <button
-            class="
-              uppercase
-              text-light
-              bg-dark
-              ff-secondary-sans
-              letter-spacing-1
-            "
-            aria-selected="true"
-          >
-            Moon
-          </button>
-          <button
-            class="
-              uppercase
-              text-light
-              bg-dark
-              ff-secondary-sans
-              letter-spacing-1
-            "
-            aria-selected="false"
-          >
-            Mars
-          </button>
-          <button
-            class="
-              uppercase
-              text-light
-              bg-dark
-              ff-secondary-sans
-              letter-spacing-1
-            "
-            aria-selected="false"
-          >
-            Europa
-          </button>
-          <button
-            class="
-              uppercase
-              text-light
-              bg-dark
-              ff-secondary-sans
-              letter-spacing-1
-            "
-            aria-selected="false"
-          >
-            Titan
-          </button>
-        </div>
+      <div class="flex tab-list underline-indicators" role="tablist">
+        <button
+          class="
+            uppercase
+            text-light
+            bg-dark
+            ff-secondary-sans
+            letter-spacing-1
+          "
+          aria-selected="true"
+          aria-controls="moon-tab"
+          role="tab"
+          tabindex="0"
+          data-image="Moon"
+        >
+          Moon
+        </button>
+        <button
+          class="
+            uppercase
+            text-light
+            bg-dark
+            ff-secondary-sans
+            letter-spacing-1
+          "
+          aria-selected="false"
+          aria-controls="mars-tab"
+          role="tab"
+          tabindex="-1"
+          data-image="Mars"
+        >
+          Mars
+        </button>
+        <button
+          class="
+            uppercase
+            text-light
+            bg-dark
+            ff-secondary-sans
+            letter-spacing-1
+          "
+          aria-selected="false"
+          aria-controls="europa-tab"
+          role="tab"
+          tabindex="-1"
+          data-image="Europa"
+        >
+          Europa
+        </button>
+        <button
+          class="
+            uppercase
+            text-light
+            bg-dark
+            ff-secondary-sans
+            letter-spacing-1
+          "
+          aria-selected="false"
+          aria-controls="titan-tab"
+          role="tab"
+          tabindex="-1"
+          data-image="Titan"
+        >
+          Titan
+        </button>
+      </div>
 
+      <article class="destination-info flow" id="moon-tab">
         <h2 class="uppercase fs-800 ff-primary-serif letter-spacing-2">Moon</h2>
         <p>
           See our planet as you’ve never seen it before. A perfect relaxing trip
@@ -146,7 +185,71 @@
           there, take in some history by visiting the Luna 2 and Apollo 11
           landing sites.
         </p>
-        <div>
+        <div class="destination-stats flex">
+          <div>
+            <h3 class="uppercase text-light">Avg. distance</h3>
+            <p class="uppercase text-white ff-primary-serif">384,400 km</p>
+          </div>
+          <div>
+            <h3 class="uppercase text-light">Est. travel time</h3>
+            <p class="uppercase text-white ff-primary-serif">3 days</p>
+          </div>
+        </div>
+      </article>
+
+      <article hidden class="destination-info flow" id="mars-tab">
+        <h2 class="uppercase fs-800 ff-primary-serif letter-spacing-2">Mars</h2>
+        <p>
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+        <div class="destination-stats flex">
+          <div>
+            <h3 class="uppercase text-light">Avg. distance</h3>
+            <p class="uppercase text-white ff-primary-serif">384,400 km</p>
+          </div>
+          <div>
+            <h3 class="uppercase text-light">Est. travel time</h3>
+            <p class="uppercase text-white ff-primary-serif">3 days</p>
+          </div>
+        </div>
+      </article>
+
+      <article hidden class="destination-info flow" id="europa-tab">
+        <h2 class="uppercase fs-800 ff-primary-serif letter-spacing-2">
+          Europa
+        </h2>
+        <p>
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+        <div class="destination-stats flex">
+          <div>
+            <h3 class="uppercase text-light">Avg. distance</h3>
+            <p class="uppercase text-white ff-primary-serif">384,400 km</p>
+          </div>
+          <div>
+            <h3 class="uppercase text-light">Est. travel time</h3>
+            <p class="uppercase text-white ff-primary-serif">3 days</p>
+          </div>
+        </div>
+      </article>
+
+      <article hidden class="destination-info flow" id="titan-tab">
+        <h2 class="uppercase fs-800 ff-primary-serif letter-spacing-2">
+          Titan
+        </h2>
+        <p>
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+        <div class="destination-stats flex">
           <div>
             <h3 class="uppercase text-light">Avg. distance</h3>
             <p class="uppercase text-white ff-primary-serif">384,400 km</p>
