@@ -69,6 +69,14 @@ body {
   color: HSL(var(--clr-white));
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+
 .numbered-title {
   font-family: var(--ff-secondary-sans);
   font-size: var(--fs-500);

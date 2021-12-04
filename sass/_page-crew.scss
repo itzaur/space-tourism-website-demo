@@ -1,0 +1,120 @@
+.grid-container--crew {
+  grid-template-areas:
+    'title'
+    'img'
+    'dots'
+    'info';
+
+  align-items: flex-start;
+  gap: 3.5rem;
+  padding-inline: 3rem;
+
+  & * {
+    max-width: 100%;
+  }
+
+  & .numbered-title {
+    grid-area: title;
+    // justify-self: flex-start;
+  }
+
+  & picture {
+    grid-area: img;
+    align-self: end;
+    height: Min(50vh, 30rem);
+    border-bottom: 1px solid HSL(var(--clr-white) / 0.2);
+
+    & > * {
+      object-fit: cover;
+      height: 100%;
+      //   align-items: flex-end;
+    }
+  }
+
+  & article {
+    grid-area: info;
+  }
+
+  .dot-indicators {
+    grid-area: dots;
+    // justify-self: flex-start;
+  }
+
+  @media (min-width: 35em) and (max-width: 48em) {
+    grid-template-areas:
+      'title'
+      'info'
+      'dots'
+      'img';
+    align-self: center;
+    padding-bottom: 0;
+
+    & .numbered-title {
+      justify-self: flex-start;
+    }
+
+    & article {
+      text-align: center;
+    }
+
+    & picture {
+      border: 0;
+    }
+
+    & p {
+      max-width: 50ch;
+      margin-inline: auto;
+    }
+  }
+
+  @media (min-width: 48em) {
+    gap: 1rem;
+    grid-template-areas:
+      '. title img .'
+      '. info img .'
+      '. dots img .';
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 80rem)) minmax(
+        2rem,
+        1fr
+      );
+    // grid-template-rows: min-content minmax(50rem, min-content) min-content;
+    padding-bottom: 0;
+
+    & .numbered-title {
+      justify-self: flex-start;
+    }
+
+    .dot-indicators {
+      justify-self: flex-start;
+    }
+
+    & picture {
+      height: 100%;
+
+      & > * {
+        object-fit: contain;
+        object-position: bottom;
+      }
+    }
+
+    & *:last-child {
+      grid-column: 2;
+    }
+  }
+}
+
+.crew-info {
+  --flow-space: 3rem;
+
+  &__text {
+    --flow-space: 0.5rem;
+
+    & > *:first-child {
+      color: HSL(var(--clr-white) / 0.2);
+    }
+  }
+}
+
+// [role='tablist'] > *:focus {
+//   background: lightgreen;
+// }

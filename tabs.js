@@ -33,24 +33,54 @@ function tabFocus(e) {
 }
 
 function changeItem(e) {
-  const parentEl = e.target.closest('.grid-container--destination');
+  const parentEl = e.target.closest('.grid-container');
   const clicked = e.target.getAttribute('aria-controls');
   const clickedImg = e.target.getAttribute('data-image');
   const clickedTab = e.target.getAttribute('aria-selected');
-  if (!clickedTab) return;
+  const span = e.target.parentNode.getAttribute('aria-selected');
+  const clickedSpan = e.target.parentNode.getAttribute('aria-controls');
+  const clickedSpanImg = e.target.parentNode.getAttribute('data-image');
+
   tabs.forEach(tab => tab.setAttribute('aria-selected', false));
 
   if (clickedTab === 'false') {
     e.target.setAttribute('aria-selected', true);
+    // e.target.parentNode.setAttribute('aria-selected', true);
+    hideContent(parentEl, 'article');
+    showContent(parentEl, [`#${clicked}`]);
+    hideContent(parentEl, 'picture');
+    showContent(parentEl, [`#${clickedImg}`]);
   }
+
+  if (span === 'false') {
+    e.target.parentNode.setAttribute('aria-selected', true);
+    hideContent(parentEl, 'article');
+    showContent(parentEl, [`#${clickedSpan}`]);
+    hideContent(parentEl, 'picture');
+    showContent(parentEl, [`#${clickedSpanImg}`]);
+  }
+
+  console.log(clicked);
+  console.log(clickedSpan);
+
+  // if (!span) return;
+
+  // if (clickedTab === 'false') {
+  //   e.target.setAttribute('aria-selected', true);
+  //   // e.target.parentNode.setAttribute('aria-selected', true);
+  // }
+
+  if (!clickedTab) return;
+  // tabs.forEach(tab => tab.setAttribute('aria-selected', false));
 
   if (!clicked) return;
 
-  hideContent(parentEl, 'article');
-  showContent(parentEl, [`#${clicked}`]);
+  // hideContent(parentEl, 'article');
+  // showContent(parentEl, [`#${clicked}`]);
+  // showContent(parentEl, [`#${clickedSpan}`]);
 
-  hideContent(parentEl, 'picture');
-  showContent(parentEl, [`#${clickedImg}`]);
+  // hideContent(parentEl, 'picture');
+  // showContent(parentEl, [`#${clickedImg}`]);
   //   parentEl.querySelectorAll('article').forEach(item => {
   //     item.setAttribute('hidden', true);
   //   });

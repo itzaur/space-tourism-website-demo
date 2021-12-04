@@ -7,7 +7,7 @@
   //font-sizes
   --fs-900: clamp(6rem, 8vw + 1rem, 15rem); //space
   --fs-800: 6rem;
-  --fs-700: 5.6rem;
+  --fs-700: clamp(2rem, 4vw + 1rem, 4.6rem);
 
   --fs-600: 2rem; //large-button
 
@@ -27,7 +27,7 @@
   //font-sizes
   --fs-900: 15rem;
   --fs-800: 8rem;
-  --fs-700: 5.6rem;
+  // --fs-700: 5.6rem;
 
   --fs-600: 3.2rem;
 
@@ -40,7 +40,7 @@
   //font-sizes
 
   --fs-800: 10rem;
-  --fs-700: 5.6rem;
+  // --fs-700: 5.6rem;
 
   --fs-600: 3.2rem;
 

@@ -1,0 +1,27 @@
+{
+  "name": "space-tourism-website-demo",
+  "version": "1.0.0",
+  "description": "![Design preview for the Space tourism website coding challenge](./preview.jpg)",
+  "main": "app.js",
+  "scripts": {
+    "postcss:watch": "postcss css/main.css --dir public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itzaur/space-tourism-website-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itzaur/space-tourism-website-demo/issues"
+  },
+  "homepage": "https://github.com/itzaur/space-tourism-website-demo#readme",
+  "devDependencies": {
+    "cssnano": "^5.0.12",
+    "postcss": "^8.4.4",
+    "postcss-cli": "^9.0.2",
+    "postcss-import": "^14.0.2",
+    "postcss-preset-env": "^7.0.1"
+  }
+}
