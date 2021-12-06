@@ -140,7 +140,7 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  padding: 4rem 1rem;
+  padding: 15rem 1rem;
 }
 
 .grid-container * {
@@ -868,9 +868,6 @@ h5 {
         grid-template-rows: 1fr min-content 1fr;
     padding-right: 0;
     padding-left: clamp(2rem, 4vw, 10rem);
-  }
-  .grid-container--technology > * {
-    border: 2px solid green;
   }
   .grid-container--technology .numbered-title {
     justify-self: flex-start;

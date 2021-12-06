@@ -47,27 +47,14 @@ body {
   padding-inline: 2em;
 }
 
-.header {
-  // display: none;
-}
-
 .grid-container {
   display: grid;
   place-items: center;
-  // text-align: center;
-  // border: 5px solid lightgreen;
-  padding: 4rem 1rem;
+
+  padding: 15rem 1rem;
 
   & * {
     max-width: 50ch;
-  }
-
-  & > *:first-child {
-    // outline: 1px solid red;
-  }
-
-  & > *:last-child {
-    // outline: 1px solid blue;
   }
 
   @media (max-width: 35em) {
@@ -90,12 +77,10 @@ body {
 
     & > *:first-child {
       grid-column: 2;
-      // outline: 1px solid red;
     }
 
     & > *:last-child {
       grid-column: 3;
-      // outline: 1px solid blue;
     }
   }
 }
