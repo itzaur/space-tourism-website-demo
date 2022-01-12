@@ -57,8 +57,14 @@ body {
     max-width: 50ch;
   }
 
-  @media (max-width: 35em) {
+  & div h1 span,
+  & p {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 48em) {
     text-align: center;
+    row-gap: 2rem;
   }
 
   @media (min-width: 48em) {
@@ -66,7 +72,7 @@ body {
         2rem,
         1fr
       );
-    column-gap: var(--container-gap, 5rem);
+    column-gap: var(--container-gap, 3rem);
     align-items: end;
     padding-bottom: Max(6rem, 20vh);
     text-align: left;

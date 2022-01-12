@@ -8,6 +8,8 @@
     'tabs'
     'info';
 
+  padding: 9rem 1rem;
+
   & .tab-list {
     grid-area: tabs;
   }
